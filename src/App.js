@@ -8,6 +8,7 @@ import { useStateValue } from './StateProvier';
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
+
   return (
     // BEM naming convention
     <div className="app">

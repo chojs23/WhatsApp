@@ -20,7 +20,7 @@ function SidebarChat({ addNewChat, id, name }) {
         .orderBy('timestamp', 'desc')
         .onSnapshot((snapshop) => setMessages(snapshop.docs.map((doc) => doc.data())));
     }
-  }, []);
+  }, [id]); //변수 쓰면 여기에 써야됨
 
   const createChat = () => {
     const roomName = prompt('Please enter name for chat room');

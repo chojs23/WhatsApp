@@ -1,5 +1,6 @@
 export const initialState = {
   user: null,
+  logged: false,
 };
 
 export const actionTypes = {
@@ -13,6 +14,7 @@ const reducer = (state, action) => {
       return {
         ...state, //keep the state
         user: action.user,
+        logged: true,
       };
     default:
       return state;
